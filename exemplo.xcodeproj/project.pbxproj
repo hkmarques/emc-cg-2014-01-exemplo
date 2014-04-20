@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F39280A7190350A800313ACB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280A6190350A800313ACB /* main.c */; };
 		F39280A9190350A800313ACB /* exemplo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F39280A8190350A800313ACB /* exemplo.1 */; };
+		F39280BB1903537100313ACB /* primitive.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280B01903537100313ACB /* primitive.c */; };
+		F39280BC1903537100313ACB /* shader.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280B21903537100313ACB /* shader.c */; };
+		F39280BD1903537100313ACB /* uniforms.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280BA1903537100313ACB /* uniforms.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,17 @@
 
 /* Begin PBXFileReference section */
 		F39280A3190350A800313ACB /* exemplo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = exemplo; sourceTree = BUILT_PRODUCTS_DIR; };
-		F39280A6190350A800313ACB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F39280A8190350A800313ACB /* exemplo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = exemplo.1; sourceTree = "<group>"; };
+		F39280AF1903537100313ACB /* linmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linmath.h; sourceTree = "<group>"; };
+		F39280B01903537100313ACB /* primitive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = primitive.c; sourceTree = "<group>"; };
+		F39280B11903537100313ACB /* primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = primitive.h; sourceTree = "<group>"; };
+		F39280B21903537100313ACB /* shader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shader.c; sourceTree = "<group>"; };
+		F39280B31903537100313ACB /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		F39280B51903537100313ACB /* fragment.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment.frag; sourceTree = "<group>"; };
+		F39280B61903537100313ACB /* vertex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertex.vert; sourceTree = "<group>"; };
+		F39280B81903537100313ACB /* fragment.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment.frag; sourceTree = "<group>"; };
+		F39280B91903537100313ACB /* vertex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertex.vert; sourceTree = "<group>"; };
+		F39280BA1903537100313ACB /* uniforms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uniforms.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +71,35 @@
 		F39280A5190350A800313ACB /* exemplo */ = {
 			isa = PBXGroup;
 			children = (
-				F39280A6190350A800313ACB /* main.c */,
+				F39280AF1903537100313ACB /* linmath.h */,
+				F39280B01903537100313ACB /* primitive.c */,
+				F39280B11903537100313ACB /* primitive.h */,
+				F39280B21903537100313ACB /* shader.c */,
+				F39280B31903537100313ACB /* shader.h */,
+				F39280B41903537100313ACB /* shader2.1 */,
+				F39280B71903537100313ACB /* shader3.3 */,
+				F39280BA1903537100313ACB /* uniforms.c */,
 				F39280A8190350A800313ACB /* exemplo.1 */,
 			);
 			path = exemplo;
+			sourceTree = "<group>";
+		};
+		F39280B41903537100313ACB /* shader2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				F39280B51903537100313ACB /* fragment.frag */,
+				F39280B61903537100313ACB /* vertex.vert */,
+			);
+			path = shader2.1;
+			sourceTree = "<group>";
+		};
+		F39280B71903537100313ACB /* shader3.3 */ = {
+			isa = PBXGroup;
+			children = (
+				F39280B81903537100313ACB /* fragment.frag */,
+				F39280B91903537100313ACB /* vertex.vert */,
+			);
+			path = shader3.3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39280A7190350A800313ACB /* main.c in Sources */,
+				F39280BC1903537100313ACB /* shader.c in Sources */,
+				F39280BD1903537100313ACB /* uniforms.c in Sources */,
+				F39280BB1903537100313ACB /* primitive.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
