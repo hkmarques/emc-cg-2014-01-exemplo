@@ -7,28 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F39280A9190350A800313ACB /* exemplo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F39280A8190350A800313ACB /* exemplo.1 */; };
+		F31236F0190365E800FB5981 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31236EF190365E800FB5981 /* OpenGL.framework */; };
+		F31236F7190460A800FB5981 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31236F21904538500FB5981 /* libglfw3.a */; };
+		F31236FB1904638600FB5981 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31236FA1904638600FB5981 /* libGLEW.a */; };
+		F31236FD19046A1A00FB5981 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31236FC19046A1A00FB5981 /* Cocoa.framework */; };
+		F31236FF19046A2700FB5981 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31236FE19046A2700FB5981 /* IOKit.framework */; };
+		F312370219047CBA00FB5981 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31237001904787B00FB5981 /* CoreVideo.framework */; };
+		F312370319048E0200FB5981 /* fragment.frag in Copy Files */ = {isa = PBXBuildFile; fileRef = F39280B51903537100313ACB /* fragment.frag */; };
+		F312370419048E0200FB5981 /* vertex.vert in Copy Files */ = {isa = PBXBuildFile; fileRef = F39280B61903537100313ACB /* vertex.vert */; };
 		F39280BB1903537100313ACB /* primitive.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280B01903537100313ACB /* primitive.c */; };
 		F39280BC1903537100313ACB /* shader.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280B21903537100313ACB /* shader.c */; };
 		F39280BD1903537100313ACB /* uniforms.c in Sources */ = {isa = PBXBuildFile; fileRef = F39280BA1903537100313ACB /* uniforms.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F39280A1190350A800313ACB /* CopyFiles */ = {
+		F39280A1190350A800313ACB /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
-				F39280A9190350A800313ACB /* exemplo.1 in CopyFiles */,
+				F312370319048E0200FB5981 /* fragment.frag in Copy Files */,
+				F312370419048E0200FB5981 /* vertex.vert in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F31236EF190365E800FB5981 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F31236F21904538500FB5981 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
+		F31236F81904637400FB5981 /* libGLEW.1.10.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.1.10.0.dylib; path = ../../../../../../usr/local/lib/libGLEW.1.10.0.dylib; sourceTree = "<group>"; };
+		F31236FA1904638600FB5981 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../../../usr/local/lib/libGLEW.a; sourceTree = "<group>"; };
+		F31236FC19046A1A00FB5981 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F31236FE19046A2700FB5981 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F31237001904787B00FB5981 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F39280A3190350A800313ACB /* exemplo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = exemplo; sourceTree = BUILT_PRODUCTS_DIR; };
-		F39280A8190350A800313ACB /* exemplo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = exemplo.1; sourceTree = "<group>"; };
 		F39280AF1903537100313ACB /* linmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linmath.h; sourceTree = "<group>"; };
 		F39280B01903537100313ACB /* primitive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = primitive.c; sourceTree = "<group>"; };
 		F39280B11903537100313ACB /* primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = primitive.h; sourceTree = "<group>"; };
@@ -46,6 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F312370219047CBA00FB5981 /* CoreVideo.framework in Frameworks */,
+				F31236FF19046A2700FB5981 /* IOKit.framework in Frameworks */,
+				F31236FD19046A1A00FB5981 /* Cocoa.framework in Frameworks */,
+				F31236FB1904638600FB5981 /* libGLEW.a in Frameworks */,
+				F31236F7190460A800FB5981 /* libglfw3.a in Frameworks */,
+				F31236F0190365E800FB5981 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +76,13 @@
 		F392809A190350A800313ACB = {
 			isa = PBXGroup;
 			children = (
+				F31237001904787B00FB5981 /* CoreVideo.framework */,
+				F31236FE19046A2700FB5981 /* IOKit.framework */,
+				F31236FC19046A1A00FB5981 /* Cocoa.framework */,
+				F31236FA1904638600FB5981 /* libGLEW.a */,
+				F31236F81904637400FB5981 /* libGLEW.1.10.0.dylib */,
+				F31236F21904538500FB5981 /* libglfw3.a */,
+				F31236EF190365E800FB5981 /* OpenGL.framework */,
 				F39280A5190350A800313ACB /* exemplo */,
 				F39280A4190350A800313ACB /* Products */,
 			);
@@ -79,7 +107,6 @@
 				F39280B41903537100313ACB /* shader2.1 */,
 				F39280B71903537100313ACB /* shader3.3 */,
 				F39280BA1903537100313ACB /* uniforms.c */,
-				F39280A8190350A800313ACB /* exemplo.1 */,
 			);
 			path = exemplo;
 			sourceTree = "<group>";
@@ -111,7 +138,7 @@
 			buildPhases = (
 				F392809F190350A800313ACB /* Sources */,
 				F39280A0190350A800313ACB /* Frameworks */,
-				F39280A1190350A800313ACB /* CopyFiles */,
+				F39280A1190350A800313ACB /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -194,6 +221,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -227,6 +260,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -235,6 +274,14 @@
 		F39280AD190350A800313ACB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -242,6 +289,14 @@
 		F39280AE190350A800313ACB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_MODULES_AUTOLINK = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -265,6 +320,7 @@
 				F39280AE190350A800313ACB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

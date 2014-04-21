@@ -6,11 +6,11 @@
 #include "linmath.h"
 #include "primitive.h"
 
-Primitive* createPrimitive(uint primitiveCount)
+Primitive* createPrimitive(unsigned int primitiveCount)
 {
 	Primitive *tmp;
 	int i;
-	uint len = sizeof(*tmp)*primitiveCount;
+	unsigned int len = sizeof(*tmp)*primitiveCount;
 	
 	assert(primitiveCount > 0);
 	
@@ -23,9 +23,9 @@ Primitive* createPrimitive(uint primitiveCount)
 	return tmp;
 }
 
-void destroyPrimitive(Primitive *p, uint count)
+void destroyPrimitive(Primitive *p, unsigned int count)
 {
-	int i, j;
+	int i;
 	
 	assert(NULL != p);
 	
@@ -35,7 +35,7 @@ void destroyPrimitive(Primitive *p, uint count)
 	free(p);
 }
 
-void setPrimitiveBuffer(Primitive *base, uint position, uint maxCount,
+void setPrimitiveBuffer(Primitive *base, unsigned int position, unsigned int maxCount,
 			const GLvoid *buffer, GLsizeiptr size)
 {
 	assert(position < maxCount);
@@ -45,8 +45,8 @@ void setPrimitiveBuffer(Primitive *base, uint position, uint maxCount,
 	base[position].pSize = size;
 }
 
-void initPrimitiveFaceArray(Primitive *base, uint position, uint maxCount, 
-			    uint faceCount)
+void initPrimitiveFaceArray(Primitive *base, unsigned int position, unsigned int maxCount, 
+			    unsigned int faceCount)
 {
 	assert(position < maxCount);
 	assert(NULL != base);
@@ -55,7 +55,7 @@ void initPrimitiveFaceArray(Primitive *base, uint position, uint maxCount,
 	base[position].faceCount = faceCount;
 }
 
-Faces* getPrimitiveFaceElement(const Primitive *base, uint position, uint maxCount,
+Faces* getPrimitiveFaceElement(const Primitive *base, unsigned int position, unsigned int maxCount,
 			       int element)
 {
 	assert(position < maxCount);
@@ -64,7 +64,7 @@ Faces* getPrimitiveFaceElement(const Primitive *base, uint position, uint maxCou
 	return &base[position].faceArray[element];
 }
 
-void setPrimitiveTransformation(Primitive *base, uint position, uint maxCount,
+void setPrimitiveTransformation(Primitive *base, unsigned int position, unsigned int maxCount,
 				mat4x4 matrix)
 {
 	assert(position < maxCount);
@@ -73,7 +73,7 @@ void setPrimitiveTransformation(Primitive *base, uint position, uint maxCount,
 	mat4x4_dup(base[position].transf, matrix);
 }
 
-mat4x4* getPrimitiveTransformation(Primitive *base, uint position, uint maxCount)
+mat4x4* getPrimitiveTransformation(Primitive *base, unsigned int position, unsigned int maxCount)
 {
 	assert(position < maxCount);
 	assert(NULL != base);
@@ -89,7 +89,7 @@ void initFace(Faces *face)
 	mat4x4_identity(face->transf);
 }
 
-void setFace(Faces *face, const GLuint *vector, uint maxElements)
+void setFace(Faces *face, const GLuint *vector, unsigned int maxElements)
 {
 	assert(NULL != face);
 	face->face = vector;

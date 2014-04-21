@@ -13,8 +13,8 @@
 // Algumas variáveis globais
 const int MAJOR = 2;
 const int MINOR = 1;
-const uint WIDTH = 800;
-const uint HEIGHT = 600;
+const unsigned int WIDTH = 800;
+const unsigned int HEIGHT = 600;
 
 // Definindo algumas primitivas a ser desenhada
 
@@ -80,7 +80,7 @@ static void initOpenGL()
 {
 	GLuint VertexArrayID;
 
-	// preenche o frameBuffer com a seguinte cor
+	// preenche o frameBuffer com a segunsigned inte cor
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	
 	
@@ -245,7 +245,7 @@ static GLFWwindow* initWindow(int argc, char *argv[], Parameters *params)
  * @param p Array de primitivas que devem ser passadas para a memória de video
  * @param count Quantidade de elementos neste array
  */
-static void prepare(Parameters *params, GLint *transf, Primitive *p, uint count)
+static void prepare(Parameters *params, GLint *transf, Primitive *p, unsigned int count)
 {
 	GLuint programa;
 	int i;
@@ -266,11 +266,6 @@ int main(int argc, char *argv[])
 	Parameters params;
 	Primitive *p;
 	GLint transformation;
-	mat4x4 scale = { {0.5f, 0, 0, 0.3},
-			 {0, 0.5f, 0, 0.4},
-			 {0, 0, 1, 0},
-			 {0, 0, 0, 1}
-			};
 	Faces *f;
 	mat4x4 matrix;
 
@@ -294,12 +289,12 @@ int main(int argc, char *argv[])
 /////////////////////////////////////////////////////////////////////////
 	
 	// Exemplo de criação de primitivas mais complexas
-	const uint vigaH = 1;
-	const uint prism = 0;
+	const unsigned int vigaH = 1;
+	const unsigned int prism = 0;
 	
-	const uint vigaH_centro = 0;
-	const uint vigaH_esquerda = 1;
-	const uint vigaH_direita = 2;
+	const unsigned int vigaH_centro = 0;
+	const unsigned int vigaH_esquerda = 1;
+	const unsigned int vigaH_direita = 2;
 
 	p = createPrimitive(2);
 	

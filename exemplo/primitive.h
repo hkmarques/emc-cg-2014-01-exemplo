@@ -15,8 +15,8 @@
 typedef struct Faces
 {
 	const GLuint	*face;	/**< vetor dos elementos que compõem uma face */
-	uint 		count;	/**< quantidade de elementos nesse vetor */
-	mat4x4		transf;	/**< matriz de transformação para esta face */
+	unsigned int 	count;	/**< quantidade de elementos nesse vetor */
+	mat4x4          transf;	/**< matriz de transformação para esta face */
 } Faces;
 
 /**
@@ -40,30 +40,30 @@ typedef struct Primitive
 
 // APIs relacionadas com a estrututra Primitive
 
-Primitive* createPrimitive(uint primitiveCount);
+Primitive* createPrimitive(unsigned int primitiveCount);
 
-void destroyPrimitive(Primitive *p, uint count);
+void destroyPrimitive(Primitive *p, unsigned int count);
 
-void setPrimitiveBuffer(Primitive *base, uint position, uint maxCount,
+void setPrimitiveBuffer(Primitive *base, unsigned int position, unsigned int maxCount,
 			const GLvoid *buffer, GLsizeiptr size);
 
-void initPrimitiveFaceArray(Primitive *base, uint position, uint maxCount, 
-			    uint faceCount);
+void initPrimitiveFaceArray(Primitive *base, unsigned int position, unsigned int maxCount, 
+			    unsigned int faceCount);
 
-Faces* getPrimitiveFaceElement(const Primitive *base, uint position, uint maxCount,
+Faces* getPrimitiveFaceElement(const Primitive *base, unsigned int position, unsigned int maxCount,
 			       int element);
 
-void setPrimitiveTransformation(Primitive *base, uint position, uint maxCount,
+void setPrimitiveTransformation(Primitive *base, unsigned int position, unsigned int maxCount,
 				mat4x4 matrix);
 
-mat4x4* getPrimitiveTransformation(Primitive *base, uint position, uint maxCount);
+mat4x4* getPrimitiveTransformation(Primitive *base, unsigned int position, unsigned int maxCount);
 
 
 // APIs relacionadas com a estrutura Faces
 
 void initFace(Faces *face);
 
-void setFace(Faces *face, const GLuint *vector, uint maxElements);
+void setFace(Faces *face, const GLuint *vector, unsigned int maxElements);
 
 void setFaceTransformation(Faces *face, mat4x4 matrix);
 
